@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    request_scheduler:
+        image: acrius/request_schedule
+        container_name: request_scheduler
+        volumes:
+            - ./app:/app
+        command: bash -c  "python3 main.py"
+        restart: always
